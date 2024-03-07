@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Canvas</title>
+    <link rel="stylesheet" href="./resources/ping-pong.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div id="init-game">
+            <h1>Ping Pong Game</h1>
+            <div class="history-wrap">
+                <button id="show-history">Show History</button>
+                <div id="history-content">
+                </div>
+            </div>
+            <div class="enter-name">
+                <h3>Enter your name</h3>
+                <div class="wrap-input">
+                    <div>
+                        <input type="text" id="player1" name="player1" placeholder="Player 1">
+                        <input type="text" id="player2" name="plyer2" placeholder="Player 2">
+                    </div>
+                    <input type="number" id="max-minute" name="max_minute" placeholder="Max Minute">
+                </div>
+                <button id="play">Play</button>
+            </div>
+            <div class="rules-wrapper">
+                <h5>Rules:</h5>
+                <ol>
+                    <li>The maximum name is 8 characters</li>
+                    <li>The maximum minutes is 100 minutes</li>
+                </ol>
+                <ol id="rules">
+                    <li>Player 1 on the left player 2 on the right</li>
+                    <li>To control player 1 press W for up S for down</li>
+                    <li>To control player 2, press Arrow Up for up, Arrow Down for down</li>
+                    <li>Press R if the ball is almost close to vertical, cooldown for 5 seconds</li>
+                    <li>The first ball will appear randomly</li>
+                    <li>The more scores your pong size will decrease</li>
+                    <li>The game will end based on the minute time you input</li>
+                    <li>You can save on the exit button and when game over</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <canvas id="main">
+    <script src="./resources/ping-pong.js"></script>
+</body>
+
+</html>

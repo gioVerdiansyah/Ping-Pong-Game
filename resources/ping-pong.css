@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'vt323';
+    src: url('./VT323-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: black;
+    color: white;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'vt323';
+}
+
+#content .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 20px;
+    width: 100%;
+    font-size: xx-large;
+}
+
+#content .row * {
+    text-align: center;
+    flex: 1;
+}
+
+#content .row :first-child {
+    text-align: start;
+}
+
+#content .row :last-child {
+    text-align: end;
+}
+
+#content .row button {
+    cursor: pointer;
+    font-family: 'vt323';
+    font-size: large;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+#content #pause {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(62, 62, 62, 0.8);
+}
+
+#content #pause .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(19, 19, 19);
+    width: 30%;
+    height: 30%;
+    border-radius: 3px;
+}
+
+#content #pause .container.game-over .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#content #pause .container button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'vt323';
+    font-size: xx-large;
+    margin: 0 20px;
+}
+
+#content #pause .container button#exit,
+#back-to-home {
+    color: red !important;
+}
+
+#back-to-home {
+    margin-top: 10px;
+}
+
+#reset-ball {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+#success-save {
+    color: green;
+}
+
+#content #init-game {
+    padding: 0 20px;
+    font-family: 'vt323';
+    font-size: xx-large;
+    text-align: center;
+    border: 2px solid white;
+    width: 100vh;
+    height: 85vh;
+    background-color: black;
+    border-radius: 3px;
+}
+
+#content #init-game button#show-history,
+#clear-history {
+    cursor: pointer;
+    margin: 0 20px;
+    padding: 3px 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+#content #init-game button#show-history:hover,
+#clear-history:hover {
+    background-color: white;
+    color: black;
+}
+
+#content #init-game .enter-name button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border: 2px solid white;
+    padding: 3px 10px;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+#content #init-game .enter-name button:hover {
+    background-color: white;
+    color: black;
+}
+
+#content #init-game .enter-name input {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+
+#content #init-game .rules-wrapper h5 {
+    margin-top: 20px;
+    text-align: start;
+}
+
+#content #init-game .rules-wrapper ol {
+    margin-top: 10px;
+}
+
+#content #init-game .rules-wrapper ol li {
+    margin-left: 30px;
+    text-align: start;
+    font-size: medium;
+}
+
+#invalid-validation {
+    color: red;
+    font-size: medium;
+}
+
+.history-wrap #history-content.active {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(38, 38, 38, 0.493);
+}
+
+.history-wrap #history-content div {
+    padding: 10px;
+    border: 2px solid white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+table thead th {
+    width: 150px;
+}
+
+table tbody tr td {
+    height: 40px;
+    font-size: x-large;
+}
+
+table tbody tr td:first-child {
+    font-size: medium;
+}
+
+button#close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: 'vt323';
+    font-size: xx-large;
+    transform: translate(15px, -30px);
+}
